@@ -11,7 +11,7 @@ start_time=$(date +%s)
 # Set a flag to indicate whether the deployment is ready
 deployment_ready=false
 
-url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID"
+url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&limit=100"
 
 if [[ -n "$INPUT_TEAM_ID" ]]; then
   url="$url&teamId=$INPUT_TEAM_ID"
