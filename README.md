@@ -10,8 +10,12 @@ Github action to wait for Vercel's GitHub integration automated deploys to be re
 ...
     steps:
       - uses: actions/checkout@v2
-      - name: Docker Action
+      - name: Wait for vercel deployment
         uses: tj-actions/vercel-wait@v1
+        with:
+          project-id: test
+          token: test-token
+        
 ```
 
 ## Inputs
