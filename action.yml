@@ -36,7 +36,7 @@ outputs:
     value: ${{ steps.vercel-wait-for-deployment.outputs.state }}
   deployment-alias-error:
     description: 'The deployment alias error'
-    value: ${{ steps.vercel-wait-for-deployment.outputs.alias-error }}
+    value: ${{ steps.vercel-wait-for-deployment.outputs.alias_error }}
 
 runs:
   using: 'composite'
