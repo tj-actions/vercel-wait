@@ -31,21 +31,20 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
   # If the deployment state is "READY", set the deployment_ready flag to true
   if [ "$state" = "\"READY\"" ]; then
     deployment_ready=true
+    cat <<EOF >>"$GITHUB_OUTPUT"
+id=$id
+url=$url
+state=$state
+alias_error=$alias_error
+EOF
   fi
 
   # Sleep for a short duration before making the next request
   sleep "$INPUT_DELAY"
 done
 
-# If the deployment is ready, print the deployment id, url, state, and alias error
-if [ "$deployment_ready" = true ]; then
-  cat <<EOF >>"$GITHUB_OUTPUT"
-id=$id
-url=$url
-state=$state
-alias_error=$alias_error
-EOF
-else
+# If the deployment isn't ready and the timeout has been reached raise an error
+if [ "$deployment_ready" -eq false ]; then
   echo "::error::Deployment did not become ready within the specified timeout of: $timeout seconds"
   exit 1
 fi
