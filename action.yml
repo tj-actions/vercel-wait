@@ -3,13 +3,13 @@ description:  Wait for a Vercel deployment to finish
 author: tj-actions
 inputs:
   token:
-    description: 'Vercel token can be obtained from https://vercel.com/account/tokens'
+    description: 'Vercel token can be obtained from `https://vercel.com/account/tokens`'
     required: true
   project-id:
-    description: 'Vercel project id can be obtained from https://vercel.com/<team>/<project>/settings'
+    description: 'Vercel project id can be obtained from `https://vercel.com/<team>/<project>/settings`'
     required: true
   team-id:
-    description: 'Vercel team id can be obtained from https://vercel.com/teams/<team>/settings'
+    description: 'Vercel team id can be obtained from `https://vercel.com/teams/<team>/settings`'
     required: false
   timeout:
     description: 'Timeout in seconds'
