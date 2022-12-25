@@ -19,3 +19,7 @@ jobs:
         uses: reviewdog/action-shellcheck@v1
       - name: Run vercel-wait
         uses: ./
+        with:
+          token: ${{ secrets.VERCEL_TOKEN }}
+          project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          sha: 7fc25ddc858357579d0136448c3470c1c9a37b66
