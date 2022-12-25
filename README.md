@@ -18,9 +18,14 @@ Github action to wait for Vercel's GitHub integration automated deploys to enabl
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-| INPUT |  TYPE  | REQUIRED |         DEFAULT         |            DESCRIPTION            |
-|-------|--------|----------|-------------------------|-----------------------------------|
-| token | string |   true   | `"${{ github.token }}"` | GITHUB\_TOKEN or a Repo scoped PAT |
+|   INPUT    |  TYPE  | REQUIRED |        DEFAULT        |                                      DESCRIPTION                                       |
+|------------|--------|----------|-----------------------|----------------------------------------------------------------------------------------|
+|   delay    | string |  false   |         `"5"`         |                                    Delay in seconds                                    |
+| project-id | string |   true   |                       | Vercel project id can be obtained from<br>https://vercel.com/<team>/<project>/settings |
+|    sha     | string |  false   | `"${{ github.sha }}"` |                               The commit sha to wait for                               |
+|  team-id   | string |  false   |                       |    Vercel team id can be obtained from<br>https://vercel.com/teams/<team>/settings     |
+|  timeout   | string |  false   |        `"600"`        |                                   Timeout in seconds                                   |
+|   token    | string |   true   |                       |        Vercel token can be obtained from https://vercel.com/account/tokens<br>         |
 
 <!-- AUTO-DOC-INPUT:END -->
 
