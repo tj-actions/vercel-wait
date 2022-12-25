@@ -1,17 +1,56 @@
-name: Docker Action
-description:  Template Docker action
+name: Vercel Wait for Deployment
+description:  Wait for a Vercel deployment to finish
 author: tj-actions
 inputs:
   token:
-    description: 'GITHUB_TOKEN or a Repo scoped PAT'
+    description: 'Vercel token can be obtained from https://vercel.com/account/tokens'
     required: true
-    default: ${{ github.token }}
+  project-id:
+    description: 'Vercel project id can be obtained from https://vercel.com/<team>/<project>/settings'
+    required: true
+  team-id:
+    description: 'Vercel team id can be obtained from https://vercel.com/teams/<team>/settings'
+    required: false
+  timeout:
+    description: 'Timeout in seconds'
+    required: false
+    default: "600"
+  delay:
+    description: 'Delay in seconds'
+    required: false
+    default: "5"
+  sha:
+    description: 'The commit sha to wait for'
+    required: false
+    default: ${{ github.sha }}
+
+outputs:
+  deployment-id:
+    description: 'The deployment id'
+    value: ${{ steps.vercel-wait-for-deployment.outputs.deployment-id }}
+  deployment-url:
+    description: 'The deployment url'
+    value: ${{ steps.vercel-wait-for-deployment.outputs.deployment-url }}
+  deployment-state:
+    description: 'The deployment state'
+    value: ${{ steps.vercel-wait-for-deployment.outputs.deployment-state }}
+  deployment-alias-error:
+    description: 'The deployment alias error'
+    value: ${{ steps.vercel-wait-for-deployment.outputs.deployment-alias-error }}
 
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.token }}
+  using: 'composite'
+  steps:
+    - run: |
+        bash $GITHUB_ACTION_PATH/entrypoint.sh
+      id: wait-for-deployment
+      shell: bash
+      env:
+        # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
+        INPUT_TOKEN: ${{ inputs.token }}
+        INPUT_PROJECT_ID: ${{ inputs.project-id }}
+        INPUT_TEAM_ID: ${{ inputs.team-id }}
+        INPUT_SHA: ${{ inputs.sha }}
 branding:
   icon: check-square
   color: white

@@ -1,6 +1,6 @@
-[![CI](https://github.com/tj-actions/docker-action/workflows/CI/badge.svg)](https://github.com/tj-actions/docker-action/actions?query=workflow%3ACI)
-[![Update release version.](https://github.com/tj-actions/docker-action/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/docker-action/actions?query=workflow%3A%22Update+release+version.%22)
-[![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fdocker-action%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+docker-action+path%3A.github%2Fworkflows+language%3AYAML\&s=\&type=Code)
+[![CI](https://github.com/tj-actions/vercel-wait/workflows/CI/badge.svg)](https://github.com/tj-actions/vercel-wait/actions?query=workflow%3ACI)
+[![Update release version.](https://github.com/tj-actions/vercel-wait/workflows/Update%20release%20version./badge.svg)](https://github.com/tj-actions/vercel-wait/actions?query=workflow%3A%22Update+release+version.%22)
+[![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fvercel-wait%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+vercel-wait+path%3A.github%2Fworkflows+language%3AYAML\&s=\&type=Code)
 
 ## vercel-wait
 
@@ -11,7 +11,7 @@ Github action to wait for Vercel's GitHub integration automated deploys to enabl
     steps:
       - uses: actions/checkout@v2
       - name: Docker Action
-        uses: tj-actions/docker-action@v1
+        uses: tj-actions/vercel-wait@v1
 ```
 
 ## Inputs
@@ -44,7 +44,7 @@ This package was created with [Cookiecutter](https://github.com/cookiecutter/coo
 
 ## Report Bugs
 
-Report bugs at https://github.com/tj-actions/docker-action/issues.
+Report bugs at https://github.com/tj-actions/vercel-wait/issues.
 
 If you are reporting a bug, please include:
 
