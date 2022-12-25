@@ -50,6 +50,8 @@ runs:
         INPUT_TOKEN: ${{ inputs.token }}
         INPUT_PROJECT_ID: ${{ inputs.project-id }}
         INPUT_TEAM_ID: ${{ inputs.team-id }}
+        INPUT_TIMEOUT: ${{ inputs.timeout }}
+        INPUT_DELAY: ${{ inputs.delay }}
         INPUT_SHA: ${{ inputs.sha }}
 branding:
   icon: check-square
