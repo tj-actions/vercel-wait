@@ -31,6 +31,17 @@ Github action to wait for Vercel's GitHub integration automated deploys to enabl
 
 ## Outputs
 
+<!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
+
+|         OUTPUT         |  TYPE  |        DESCRIPTION         |
+|------------------------|--------|----------------------------|
+| deployment-alias-error | string | The deployment alias error |
+|     deployment-id      | string |     The deployment id      |
+|    deployment-state    | string |    The deployment state    |
+|     deployment-url     | string |     The deployment url     |
+
+<!-- AUTO-DOC-OUTPUT:END -->
+
 *   Free software: [MIT license](LICENSE)
 
 If you feel generous and want to show some extra appreciation:
