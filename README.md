@@ -4,7 +4,7 @@
 
 ## vercel-wait
 
-Github action to wait for Vercel's GitHub integration automated deploys to enable triggering any dependent workflows.
+Github action to wait for Vercel's GitHub integration automated deploys to be ready which enables triggering any dependent workflows.
 
 ```yaml
 ...
