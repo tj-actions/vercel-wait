@@ -11,10 +11,16 @@ start_time=$(date +%s)
 # Set a flag to indicate whether the deployment is ready
 deployment_ready=false
 
+url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID"
+
+if [[ -n "$INPUT_TEAM_ID" ]]; then
+  url="$url&teamId=$INPUT_TEAM_ID"
+fi
+
 # Loop until the deployment is ready or the timeout is reached
 while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$timeout" ]; do
   # Make the GET request to the Vercel API
-  response=$(curl -X GET "https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&teamId=$INPUT_TEAM_ID" -H "Authorization: Bearer $INPUT_TOKEN")
+  response=$(curl -X GET "$url" -H "Authorization: Bearer $INPUT_TOKEN")
 
   # Extract the deployment id, url, state, and alias error from the response
   id=$(printf "%s" "$response" | jq --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .uid')
