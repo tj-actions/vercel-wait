@@ -44,7 +44,7 @@ EOF
 done
 
 # If the deployment isn't ready and the timeout has been reached raise an error
-if [ "$deployment_ready" -eq false ]; then
+if [ "$deployment_ready" = false ]; then
   echo "::error::Deployment did not become ready within the specified timeout of: $timeout seconds"
   exit 1
 fi
