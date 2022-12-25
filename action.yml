@@ -27,23 +27,23 @@ inputs:
 outputs:
   deployment-id:
     description: 'The deployment id'
-    value: ${{ steps.vercel-wait-for-deployment.outputs.id }}
+    value: ${{ steps.vercel-wait.outputs.id }}
   deployment-url:
     description: 'The deployment url'
-    value: ${{ steps.vercel-wait-for-deployment.outputs.url }}
+    value: ${{ steps.vercel-wait.outputs.url }}
   deployment-state:
     description: 'The deployment state'
-    value: ${{ steps.vercel-wait-for-deployment.outputs.state }}
+    value: ${{ steps.vercel-wait.outputs.state }}
   deployment-alias-error:
     description: 'The deployment alias error'
-    value: ${{ steps.vercel-wait-for-deployment.outputs.alias_error }}
+    value: ${{ steps.vercel-wait.outputs.alias_error }}
 
 runs:
   using: 'composite'
   steps:
     - run: |
         bash $GITHUB_ACTION_PATH/entrypoint.sh
-      id: wait-for-deployment
+      id: vercel-wait
       shell: bash
       env:
         # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
