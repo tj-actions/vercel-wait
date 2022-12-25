@@ -23,13 +23,13 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
   response=$(curl -X GET "$url" -H "Authorization: Bearer $INPUT_TOKEN")
 
   # Extract the deployment id, url, state, and alias error from the response
-  id=$(printf "%s" "$response" | jq --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .uid')
-  url=$(printf "%s" "$response" | jq --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .url')
-  state=$(printf "%s" "$response" | jq --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .state')
-  alias_error=$(printf "%s" "$response" | jq --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .aliasError')
+  id=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .uid')
+  url=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .url')
+  state=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .state')
+  alias_error=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .aliasError')
 
   # If the deployment state is "READY", set the deployment_ready flag to true
-  if [ "$state" = "\"READY\"" ]; then
+  if [ "$state" = "READY" ]; then
     deployment_ready=true
     cat <<EOF >>"$GITHUB_OUTPUT"
 id=$id
