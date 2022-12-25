@@ -29,7 +29,7 @@ Github action to wait for Vercel's GitHub integration automated deploys to be re
 |    sha     | string |  false   | `"${{ github.sha }}"` |                                The commit sha to wait for                                |
 |  team-id   | string |  false   |                       |    Vercel team id can be obtained from<br>`https://vercel.com/teams/<team>/settings`     |
 |  timeout   | string |  false   |        `"600"`        |                                    Timeout in seconds                                    |
-|   token    | string |   true   |                       |        Vercel token can be obtained from `https://vercel.com/account/tokens`<br>         |
+|   token    | string |   true   |                       |         Vercel token can be obtained from https://vercel.com/account/tokens<br>          |
 
 <!-- AUTO-DOC-INPUT:END -->
 
