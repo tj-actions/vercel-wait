@@ -2,7 +2,15 @@
 
 ## [v1](https://github.com/tj-actions/vercel-wait/tree/v1) (2022-12-25)
 
-[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.0.0...v1)
+[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.0...v1)
+
+## [v1.1.0](https://github.com/tj-actions/vercel-wait/tree/v1.1.0) (2022-12-25)
+
+[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.0.0...v1.1.0)
+
+**Merged pull requests:**
+
+- Upgraded to v1.0.0 [\#4](https://github.com/tj-actions/vercel-wait/pull/4) ([jackton1](https://github.com/jackton1))
 
 ## [v1.0.0](https://github.com/tj-actions/vercel-wait/tree/v1.0.0) (2022-12-25)
 
