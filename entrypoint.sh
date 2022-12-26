@@ -20,7 +20,7 @@ fi
 # Loop until the deployment is ready or the timeout is reached
 while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$timeout" ]; do
   # Make the GET request to the Vercel API
-  response=$(curl -v "$url" -H "Authorization: Bearer $INPUT_TOKEN") || true
+  response=$(curl -q "$url" -H "Authorization: Bearer $INPUT_TOKEN") || true
 
   # Extract the deployment id, url, state, and alias error from the response
   id=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .uid')
