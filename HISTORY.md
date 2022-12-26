@@ -1,16 +1,18 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/vercel-wait/tree/HEAD)
+## [v1](https://github.com/tj-actions/vercel-wait/tree/v1) (2022-12-26)
 
-[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1...HEAD)
+[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.4...v1)
+
+## [v1.1.4](https://github.com/tj-actions/vercel-wait/tree/v1.1.4) (2022-12-26)
+
+[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.3...v1.1.4)
 
 **Merged pull requests:**
 
+- Updated README.md [\#11](https://github.com/tj-actions/vercel-wait/pull/11) ([jackton1](https://github.com/jackton1))
+- Upgraded to v1.1.3 [\#10](https://github.com/tj-actions/vercel-wait/pull/10) ([jackton1](https://github.com/jackton1))
 - Upgraded to v1.1.2 [\#9](https://github.com/tj-actions/vercel-wait/pull/9) ([jackton1](https://github.com/jackton1))
-
-## [v1](https://github.com/tj-actions/vercel-wait/tree/v1) (2022-12-25)
-
-[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.3...v1)
 
 ## [v1.1.3](https://github.com/tj-actions/vercel-wait/tree/v1.1.3) (2022-12-25)
 
