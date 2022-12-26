@@ -21,8 +21,7 @@ inputs:
     default: "5"
   sha:
     description: 'The commit sha to wait for'
-    required: false
-    default: ${{ github.sha }}
+    required: true
 
 outputs:
   deployment-id:
