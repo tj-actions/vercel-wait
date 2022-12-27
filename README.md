@@ -42,7 +42,6 @@ on:
           sha: ${{ github.event.pull_request.head.sha }}
 ```
 
-
 ## Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
