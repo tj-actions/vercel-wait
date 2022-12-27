@@ -6,23 +6,23 @@ start_time=$(date +%s)
 
 deployment_ready=false
 
-url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&limit=100"
+request_url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&limit=100"
 
 if [[ -n "$INPUT_TEAM_ID" ]]; then
-  url="$url&teamId=$INPUT_TEAM_ID"
+  request_url="$request_url&teamId=$INPUT_TEAM_ID"
 fi
 
-echo "::debug::Retrieving Deployments from: $url"
+echo "::debug::Retrieving Deployments from: $request_url"
 
 while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
-  echo "::debug::Requesting deployments from: $url"
-  response=$(curl -s "$url" -H "Authorization: Bearer $INPUT_TOKEN" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)') && exit_status=$? || exit_status=$?
-  
+  echo "::debug::Requesting deployments from: $request_url"
+  response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)') && exit_status=$? || exit_status=$?
+
   if [[ $exit_status -ne 0 ]]; then
-    echo "::warning::Failed to get deployment from: $url"
+    echo "::warning::Failed to get deployment from: $request_url"
   fi
 
-  echo "::debug::Parsing the response from: $url"
+  echo "::debug::Parsing the response from: $request_url"
 
   id=$(jq -r '.uid' <<< "$response")
   url=$(jq -r '.url' <<< "$response")
