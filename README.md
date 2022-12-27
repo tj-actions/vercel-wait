@@ -6,24 +6,42 @@
 
 Github action to wait for Vercel's GitHub integration automated deploys to be ready which enables triggering any dependent workflows.
 
+### Example for push event
+
 ```yaml
 on:
   push:
     branches:
       - main
+
+...
+    steps:
+      - name: Wait for vercel deployment (push)
+        uses: tj-actions/vercel-wait@v1
+        with:
+          project-id: test
+          token: test-token
+          sha: ${{ github.sha }}
+```
+
+### Example for pull request events
+
+```yaml
+on:
   pull_request:
     branches:
       - main
 
 ...
     steps:
-      - uses: actions/checkout@v2
-      - name: Wait for vercel deployment
+      - name: Wait for vercel deployment (push)
         uses: tj-actions/vercel-wait@v1
         with:
           project-id: test
           token: test-token
+          sha: ${{ github.event.pull_request.head.sha }}
 ```
+
 
 ## Inputs
 
