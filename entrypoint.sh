@@ -2,13 +2,8 @@
 
 set -euo pipefail
 
-# Set a timeout for the loop in seconds
-timeout=$INPUT_TIMEOUT
-
-# Start a timer
 start_time=$(date +%s)
 
-# Set a flag to indicate whether the deployment is ready
 deployment_ready=false
 
 url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&limit=100"
@@ -17,8 +12,7 @@ if [[ -n "$INPUT_TEAM_ID" ]]; then
   url="$url&teamId=$INPUT_TEAM_ID"
 fi
 
-# Loop until the deployment is ready or the timeout is reached
-while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$timeout" ]; do
+while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
   # Make the GET request to the Vercel API
   response=$(curl -s "$url" -H "Authorization: Bearer $INPUT_TOKEN") || true
 
@@ -28,7 +22,6 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
   state=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .state')
   alias_error=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .aliasError')
 
-  # If the deployment state is "READY", set the deployment_ready flag to true
   if [ "$state" = "READY" ]; then
     deployment_ready=true
     cat <<EOF >>"$GITHUB_OUTPUT"
@@ -43,8 +36,7 @@ EOF
   sleep "$INPUT_DELAY"
 done
 
-# If the deployment isn't ready and the timeout has been reached raise an error
 if [ "$deployment_ready" = false ]; then
-  echo "::error::Deployment did not become ready within the specified timeout of: $timeout seconds"
+  echo "::error::Deployment did not become ready within the specified timeout of: $INPUT_TIMEOUT seconds"
   exit 1
 fi
