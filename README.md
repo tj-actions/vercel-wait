@@ -7,6 +7,14 @@
 Github action to wait for Vercel's GitHub integration automated deploys to be ready which enables triggering any dependent workflows.
 
 ```yaml
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
 ...
     steps:
       - uses: actions/checkout@v2
@@ -15,7 +23,6 @@ Github action to wait for Vercel's GitHub integration automated deploys to be re
         with:
           project-id: test
           token: test-token
-        
 ```
 
 ## Inputs
