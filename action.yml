@@ -53,5 +53,5 @@ runs:
         INPUT_DELAY: ${{ inputs.delay }}
         INPUT_SHA: ${{ inputs.sha }}
 branding:
-  icon: check-square
+  icon: clock
   color: white
