@@ -2,7 +2,18 @@
 
 ## [v1](https://github.com/tj-actions/vercel-wait/tree/v1) (2022-12-27)
 
-[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.5...v1)
+[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.6...v1)
+
+## [v1.1.6](https://github.com/tj-actions/vercel-wait/tree/v1.1.6) (2022-12-27)
+
+[Full Changelog](https://github.com/tj-actions/vercel-wait/compare/v1.1.5...v1.1.6)
+
+**Merged pull requests:**
+
+- fix: bug with overwritting the url [\#17](https://github.com/tj-actions/vercel-wait/pull/17) ([jackton1](https://github.com/jackton1))
+- Bump hmarr/auto-approve-action from 2 to 3 [\#16](https://github.com/tj-actions/vercel-wait/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Updated README.md [\#15](https://github.com/tj-actions/vercel-wait/pull/15) ([jackton1](https://github.com/jackton1))
+- Upgraded to v1.1.5 [\#14](https://github.com/tj-actions/vercel-wait/pull/14) ([jackton1](https://github.com/jackton1))
 
 ## [v1.1.5](https://github.com/tj-actions/vercel-wait/tree/v1.1.5) (2022-12-27)
 
