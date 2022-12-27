@@ -22,13 +22,7 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
     .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .url,
     .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .state,
     .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .aliasError
-  ] | join(" ")') && exit_status=$? || exit_status=$?
-  
-  if [[ $exit_status -ne 0 ]]; then
-    echo "::warning::Failed to get deployment from: $url"
-  fi
-
-  echo "::debug::Parsing the response from: $url"
+  ] | join(" ")')
 
   if [ "$state" = "READY" ]; then
     deployment_ready=true
@@ -40,7 +34,7 @@ alias_error=$alias_error
 EOF
   fi
 
-  echo "::debug::Unable to retrieve deployment sleeping for: $INPUT_DELAY seconds"
+  echo "::warning::Unable to retrieve deployment sleeping for: $INPUT_DELAY seconds"
 
   sleep "$INPUT_DELAY"
 done
