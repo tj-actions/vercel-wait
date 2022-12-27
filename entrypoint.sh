@@ -16,18 +16,19 @@ echo "::debug::Retrieving Deployments from: $url"
 
 while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
   echo "::debug::Requesting deployments from: $url"
-  response=$(curl -s "$url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
+
+  read -r id url state alias_error < <(curl -s "$url" -H "Authorization: Bearer $INPUT_TOKEN" | jq -r --arg INPUT_SHA "$INPUT_SHA" '[
+    .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .uid,
+    .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .url,
+    .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .state,
+    .deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .aliasError
+  ] | join(" ")') && exit_status=$? || exit_status=$?
   
   if [[ $exit_status -ne 0 ]]; then
     echo "::warning::Failed to get deployment from: $url"
   fi
 
   echo "::debug::Parsing the response from: $url"
-
-  id=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .uid')
-  url=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .url')
-  state=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .state')
-  alias_error=$(printf "%s" "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA) | .aliasError')
 
   if [ "$state" = "READY" ]; then
     deployment_ready=true
