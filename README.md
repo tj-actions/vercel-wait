@@ -19,8 +19,8 @@ on:
       - name: Wait for vercel deployment (push)
         uses: tj-actions/vercel-wait@v1
         with:
-          project-id: test
-          token: test-token
+          project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          token:  ${{ secrets.VERCEL_TOKEN }}
           sha: ${{ github.sha }}
 ```
 
@@ -37,8 +37,8 @@ on:
       - name: Wait for vercel deployment (push)
         uses: tj-actions/vercel-wait@v1
         with:
-          project-id: test
-          token: test-token
+          project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          token:  ${{ secrets.VERCEL_TOKEN }}
           sha: ${{ github.event.pull_request.head.sha }}
 ```
 
