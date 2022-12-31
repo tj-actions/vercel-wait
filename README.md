@@ -50,7 +50,7 @@ on:
 |------------|--------|----------|---------|------------------------------------------------------------------------------------------|
 |   delay    | string |  false   |  `"5"`  |                                     Delay in seconds                                     |
 | project-id | string |   true   |         | Vercel project id can be obtained<br>from `https://vercel.com/<team>/<project>/settings` |
-|    sha     | string |   true   |         |                              The commit sha to wait for<br>                              |
+|    sha     | string |   true   |         |                                The commit sha to wait for                                |
 |  team-id   | string |  false   |         |    Vercel team id can be obtained<br>from `https://vercel.com/teams/<team>/settings`     |
 |  timeout   | string |  false   | `"600"` |                                    Timeout in seconds                                    |
 |   token    | string |   true   |         |          Vercel token can be obtained from<br>https://vercel.com/account/tokens          |
