@@ -14,7 +14,7 @@ inputs:
   timeout:
     description: 'Timeout in seconds'
     required: false
-    default: "600"
+    default: "300"
   delay:
     description: 'Delay in seconds'
     required: false
