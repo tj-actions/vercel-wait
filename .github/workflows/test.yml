@@ -23,7 +23,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          sha: 5d2feda3b25c47193f6339938b06945f1b1a23f2
+          sha: 0748cd764b243ec8870327265386ed726a8c2447
       - name: Show output
         run: |
           echo '${{ toJSON(steps.vercel-wait.outputs) }}'
