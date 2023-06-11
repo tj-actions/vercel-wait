@@ -12,6 +12,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     name: Test vercel-wait
+    if: |
+      github.actor != 'dependabot[bot]' ||
+      github.actor != 'dependabot' ||
+      github.actor != 'dependabot-preview[bot]' ||
+      github.actor != 'dependabot-preview' ||
+      github.actor != 'renovate[bot]' ||
+      github.actor != 'renovate'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
