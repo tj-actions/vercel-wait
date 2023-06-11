@@ -16,8 +16,7 @@ echo "::debug::Retrieving Deployments from: $request_url"
 
 while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
   echo "::debug::Requesting deployments from: $request_url"
-  response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN")
-  exit_status=$?
+  response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
   
   if [[ $exit_status -ne 0 ]]; then
     echo "::warning::Failed to get deployment from: $request_url"
