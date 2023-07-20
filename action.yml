@@ -18,7 +18,7 @@ inputs:
   delay:
     description: 'Delay in seconds'
     required: false
-    default: "5"
+    default: "30"
   sha:
     description: 'The commit sha to wait for'
     required: true
