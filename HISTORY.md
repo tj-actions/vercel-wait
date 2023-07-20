@@ -1,5 +1,38 @@
 # Changelog
 
+# [1.1.9](https://github.com/tj-actions/vercel-wait/compare/v1.1.8...v1.1.9) - (2023-07-20)
+
+## <!-- 17 -->➖ Remove
+
+- Deleted .github/workflows/auto-merge.yml ([4004a17](https://github.com/tj-actions/vercel-wait/commit/4004a17f928ff6c5be73033aaddc5b13492404be))  - (Tonye Jack)
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md ([#71](https://github.com/tj-actions/vercel-wait/issues/71))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([d44c963](https://github.com/tj-actions/vercel-wait/commit/d44c963ee110b2864d4bfbf91650d29847b3d021))  - (tj-actions[bot])
+- Update action.yml ([270933d](https://github.com/tj-actions/vercel-wait/commit/270933d8b6ba8ca117881e5193c3f34f0bbf4942))  - (Tonye Jack)
+- Updated README.md
+ ([842c3cf](https://github.com/tj-actions/vercel-wait/commit/842c3cf01711762f16093a0969d49169ec5991bd))  - (jackton1)
+- Update action.yml ([186db57](https://github.com/tj-actions/vercel-wait/commit/186db57d6f20b95bc4a21683bef587a708f67a6b))  - (Tonye Jack)
+- Update action.yml ([36e7a5c](https://github.com/tj-actions/vercel-wait/commit/36e7a5ccdb174af4a6a7ab00761e5a68f4db35af))  - (Tonye Jack)
+- Updated renovate.json ([1cd1553](https://github.com/tj-actions/vercel-wait/commit/1cd1553bbfa3f163a3a738d776a91f96c591bc75))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#70](https://github.com/tj-actions/vercel-wait/pull/70): README.md ([d3cb963](https://github.com/tj-actions/vercel-wait/commit/d3cb9634a564f455749b2913aa77dea9943b4aa5))  - (repo-ranger[bot])
+- PR [#69](https://github.com/tj-actions/vercel-wait/pull/69): update tj-actions/auto-doc action to v2.8.0 ([82340a5](https://github.com/tj-actions/vercel-wait/commit/82340a52cd738640bbb42cb365942f83d7fb6cd3))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update tj-actions/auto-doc action to v2.8.0 ([22653a1](https://github.com/tj-actions/vercel-wait/commit/22653a1a838aaa22d1e949d7c5808304f80932d7))  - (renovate[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded to v1.1.8 ([#68](https://github.com/tj-actions/vercel-wait/issues/68))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([7f86db1](https://github.com/tj-actions/vercel-wait/commit/7f86db156e1dafa0486562d281aa22fc6a8cf76f))  - (tj-actions[bot])
+
 # [1.1.8](https://github.com/tj-actions/vercel-wait/compare/v1.1.7...v1.1.8) - (2023-07-05)
 
 ## <!-- 13 -->📦 Bumps
