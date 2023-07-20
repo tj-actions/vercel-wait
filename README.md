@@ -48,7 +48,7 @@ on:
 
 |   INPUT    |  TYPE  | REQUIRED | DEFAULT |                                        DESCRIPTION                                         |
 |------------|--------|----------|---------|--------------------------------------------------------------------------------------------|
-|   delay    | string |  false   | `"30"`  |                                      Delay in seconds                                      |
+|   delay    | string |  false   | `"10"`  |                                      Delay in seconds                                      |
 | project-id | string |   true   |         | Vercel project id can be <br>obtained from `https://vercel.com/<team>/<project>/settings`  |
 |    sha     | string |   true   |         |                              The commit sha to wait <br>for                                |
 |  team-id   | string |  false   |         |    Vercel team id can be <br>obtained from `https://vercel.com/teams/<team>/settings`      |
