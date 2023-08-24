@@ -46,14 +46,14 @@ on:
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|   INPUT    |  TYPE  | REQUIRED | DEFAULT |                                        DESCRIPTION                                         |
-|------------|--------|----------|---------|--------------------------------------------------------------------------------------------|
-|   delay    | string |  false   | `"10"`  |                                      Delay in seconds                                      |
-| project-id | string |   true   |         | Vercel project id can be <br>obtained from `https://vercel.com/<team>/<project>/settings`  |
-|    sha     | string |   true   |         |                              The commit sha to wait <br>for                                |
-|  team-id   | string |  false   |         |    Vercel team id can be <br>obtained from `https://vercel.com/teams/<team>/settings`      |
-|  timeout   | string |  false   | `"600"` |                                     Timeout in seconds                                     |
-|   token    | string |   true   |         |          Vercel token can be obtained <br>from https://vercel.com/account/tokens           |
+|                             INPUT                              |  TYPE  | REQUIRED | DEFAULT |                                        DESCRIPTION                                         |
+|----------------------------------------------------------------|--------|----------|---------|--------------------------------------------------------------------------------------------|
+|        <a name="input_delay"></a>[delay](#input_delay)         | string |  false   | `"10"`  |                                      Delay in seconds                                      |
+| <a name="input_project-id"></a>[project-id](#input_project-id) | string |   true   |         | Vercel project id can be <br>obtained from `https://vercel.com/<team>/<project>/settings`  |
+|           <a name="input_sha"></a>[sha](#input_sha)            | string |   true   |         |                              The commit sha to wait <br>for                                |
+|     <a name="input_team-id"></a>[team-id](#input_team-id)      | string |  false   |         |    Vercel team id can be <br>obtained from `https://vercel.com/teams/<team>/settings`      |
+|     <a name="input_timeout"></a>[timeout](#input_timeout)      | string |  false   | `"600"` |                                     Timeout in seconds                                     |
+|        <a name="input_token"></a>[token](#input_token)         | string |   true   |         |          Vercel token can be obtained <br>from https://vercel.com/account/tokens           |
 
 <!-- AUTO-DOC-INPUT:END -->
 
@@ -61,12 +61,12 @@ on:
 
 <!-- AUTO-DOC-OUTPUT:START - Do not remove or modify this section -->
 
-|         OUTPUT         |  TYPE  |        DESCRIPTION         |
-|------------------------|--------|----------------------------|
-| deployment-alias-error | string | The deployment alias error |
-|     deployment-id      | string |     The deployment id      |
-|    deployment-state    | string |    The deployment state    |
-|     deployment-url     | string |     The deployment url     |
+|                                                OUTPUT                                                |  TYPE  |        DESCRIPTION         |
+|------------------------------------------------------------------------------------------------------|--------|----------------------------|
+| <a name="output_deployment-alias-error"></a>[deployment-alias-error](#output_deployment-alias-error) | string | The deployment alias error |
+|              <a name="output_deployment-id"></a>[deployment-id](#output_deployment-id)               | string |     The deployment id      |
+|          <a name="output_deployment-state"></a>[deployment-state](#output_deployment-state)          | string |    The deployment state    |
+|             <a name="output_deployment-url"></a>[deployment-url](#output_deployment-url)             | string |     The deployment url     |
 
 <!-- AUTO-DOC-OUTPUT:END -->
 
