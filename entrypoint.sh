@@ -48,6 +48,7 @@ EOF
   if [ "$next" != "null" ]; then
     if [[ $request_url == *"&until="* ]]; then
       # If "until" parameter already exists, replace it
+      # shellcheck disable=SC2001
       request_url=$(echo "$request_url" | sed "s/until=[0-9]*/until=$next/")
     else
       # If "until" parameter does not exist, add it
