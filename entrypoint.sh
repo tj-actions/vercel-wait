@@ -46,7 +46,7 @@ EOF
   next=$(echo "$response" | jq -r '.pagination.next')
 
   if [ "$next" != "null" ]; then
-    if [[ $request_url == *"until"* ]]; then
+    if [[ $request_url == *"&until="* ]]; then
       # If "until" parameter already exists, replace it
       request_url=$(echo $request_url | sed "s/until=[0-9]*/until=$next/")
     else
