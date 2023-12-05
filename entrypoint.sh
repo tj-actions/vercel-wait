@@ -25,7 +25,7 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
   
   echo "::debug::Parsing the response from: $request_url"
   
-  deployment=$(echo "$response" | jq -r '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)')
+  deployment=$(echo "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)')
   
   id=$(echo "$deployment" | jq -r '.uid')
   url=$(echo "$deployment" | jq -r '.url')
