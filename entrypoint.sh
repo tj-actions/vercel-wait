@@ -48,7 +48,7 @@ EOF
   if [ "$next" != "null" ]; then
     if [[ $request_url == *"&until="* ]]; then
       # If "until" parameter already exists, replace it
-      request_url=$(echo $request_url | sed "s/until=[0-9]*/until=$next/")
+      request_url=$(echo "$request_url" | sed "s/until=[0-9]*/until=$next/")
     else
       # If "until" parameter does not exist, add it
       request_url="$request_url&until=$next"
