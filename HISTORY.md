@@ -1,5 +1,20 @@
 # Changelog
 
+# [1.2.0](https://github.com/tj-actions/vercel-wait/compare/v1.1.10...v1.2.0) - (2023-12-05)
+
+## <!-- 0 -->🚀 Features
+
+- Add support for pagination ([#65](https://github.com/tj-actions/vercel-wait/issues/65)) ([02778e4](https://github.com/tj-actions/vercel-wait/commit/02778e4f79591e61007c17959250da3311880834))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#82](https://github.com/tj-actions/vercel-wait/pull/82): to v1.1.10 ([edf37cb](https://github.com/tj-actions/vercel-wait/commit/edf37cb9eac87185ffb8d48936ee5534759220fe))  - (repo-ranger[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded from v1.1.9 -> v1.1.10
+ ([dba1f73](https://github.com/tj-actions/vercel-wait/commit/dba1f73ec2dd935175282592074950cd90bca55f))  - (jackton1)
+
 # [1.1.10](https://github.com/tj-actions/vercel-wait/compare/v1.1.9...v1.1.10) - (2023-12-05)
 
 ## <!-- 16 -->➕ Add
