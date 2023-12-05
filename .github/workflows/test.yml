@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request_target:
+  pull_request:
     branches:
       - main
 
@@ -21,7 +21,7 @@ jobs:
       github.actor != 'renovate'
     steps:
       - name: Checkout
-        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4
+        uses: actions/checkout@v4
       - name: shellcheck
         uses: reviewdog/action-shellcheck@v1
       - name: Run vercel-wait
@@ -30,7 +30,7 @@ jobs:
         with:
           token: ${{ secrets.VERCEL_TOKEN }}
           project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          sha: 298d2319936ddcd63b3027276d3ab00ef1709520
+          sha: 4586daf3848c00eabea1cc3ecf5cac6b8d0d9211
       - name: Show output
         run: |
           echo '${{ toJSON(steps.vercel-wait.outputs) }}'
