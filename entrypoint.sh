@@ -16,18 +16,21 @@ echo "::debug::Retrieving Deployments from: $request_url"
 
 while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
   echo "::debug::Requesting deployments from: $request_url"
-  response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)') && exit_status=$? || exit_status=$?
-
+  response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
+  
   if [[ $exit_status -ne 0 ]]; then
     echo "::warning::Failed to get deployment from: $request_url"
+    break
   fi
-
+  
   echo "::debug::Parsing the response from: $request_url"
-
-  id=$(jq -r '.uid' <<< "$response")
-  url=$(jq -r '.url' <<< "$response")
-  state=$(jq -r '.state' <<< "$response")
-  alias_error=$(jq -r '.aliasError' <<< "$response")
+  
+  deployment=$(echo "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)')
+  
+  id=$(echo "$deployment" | jq -r '.uid')
+  url=$(echo "$deployment" | jq -r '.url')
+  state=$(echo "$deployment" | jq -r '.state')
+  alias_error=$(echo "$deployment" | jq -r '.aliasError')
 
   if [ "$state" = "READY" ]; then
     deployment_ready=true
@@ -37,11 +40,23 @@ url=$url
 state=$state
 alias_error=$alias_error
 EOF
+    break
   fi
 
-  echo "::debug::Unable to retrieve deployment sleeping for: $INPUT_DELAY seconds"
+  next=$(echo "$response" | jq -r '.pagination.next')
 
-  sleep "$INPUT_DELAY"
+  if [ "$next" != "null" ]; then
+    if [[ $request_url == *"&until="* ]]; then
+      # If "until" parameter already exists, replace it
+      # shellcheck disable=SC2001
+      request_url=$(echo "$request_url" | sed "s/until=[0-9]*/until=$next/")
+    else
+      # If "until" parameter does not exist, add it
+      request_url="$request_url&until=$next"
+    fi
+  else
+    break
+  fi
 done
 
 if [ "$deployment_ready" = false ]; then
