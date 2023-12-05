@@ -1,5 +1,53 @@
 # Changelog
 
+# [1.1.10](https://github.com/tj-actions/vercel-wait/compare/v1.1.9...v1.1.10) - (2023-12-05)
+
+## <!-- 16 -->➕ Add
+
+- Added .github/FUNDING.yml ([dc28e44](https://github.com/tj-actions/vercel-wait/commit/dc28e44d64764e904b9c55d1d34648742c9e2c67))  - (Tonye Jack)
+- Create dependabot-auto-merge.yml ([4be0c48](https://github.com/tj-actions/vercel-wait/commit/4be0c48b622fa165ecf3ff6f1376c9006bbbd069))  - (Tonye Jack)
+
+## <!-- 17 -->➖ Remove
+
+- Deleted .github/workflows/auto-approve.yml ([01470df](https://github.com/tj-actions/vercel-wait/commit/01470df8f5fd78c375050045e8084979684066f2))  - (Tonye Jack)
+- Deleted .github/ISSUE_TEMPLATE/feature_request.yaml ([ba27c6e](https://github.com/tj-actions/vercel-wait/commit/ba27c6ea1a42c4c526841faa75b0f8eac2107dee))  - (Tonye Jack)
+- Deleted .github/ISSUE_TEMPLATE/bug_report.yaml ([486537f](https://github.com/tj-actions/vercel-wait/commit/486537f1b2c4a3eb4ccf0c304e2a79b715d789aa))  - (Tonye Jack)
+- Deleted .github/FUNDING.yml ([d206f8f](https://github.com/tj-actions/vercel-wait/commit/d206f8fca34277b6447e4671971be5417c5e349f))  - (Tonye Jack)
+
+## <!-- 26 -->🔄 Update
+
+- Update rebase.yml ([0e051f4](https://github.com/tj-actions/vercel-wait/commit/0e051f44f6e4e22c4526571d5ce12d76787a386d))  - (Tonye Jack)
+- Update sync-release-version.yml ([b88e63c](https://github.com/tj-actions/vercel-wait/commit/b88e63cc5af36a6d2dab72bddf208c74667f81ca))  - (Tonye Jack)
+- Update test.yml ([4f18763](https://github.com/tj-actions/vercel-wait/commit/4f18763fd063a66e0e9121f39631330c00e823b7))  - (Tonye Jack)
+- Updated .github/FUNDING.yml ([695bd5c](https://github.com/tj-actions/vercel-wait/commit/695bd5c3e56087d19fa49973829d7ca9ad3c3bfc))  - (Tonye Jack)
+- Updated README.md
+ ([d3cb85d](https://github.com/tj-actions/vercel-wait/commit/d3cb85d2153ca7ce11611af01f50cfe938e43764))  - (repo-ranger[bot])
+- Update test.yml ([84c00e1](https://github.com/tj-actions/vercel-wait/commit/84c00e1a47e31e393f318b8d109f591dc7a95e56))  - (Tonye Jack)
+- Update test.yml ([4b8711f](https://github.com/tj-actions/vercel-wait/commit/4b8711fd0801831658d4f0939622cda5144c8a58))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#81](https://github.com/tj-actions/vercel-wait/pull/81): update actions/checkout digest to b4ffde6 ([cdb788f](https://github.com/tj-actions/vercel-wait/commit/cdb788f4b085503dbbc0758484cfe4180d97b224))  - (repo-ranger[bot])
+- PR [#79](https://github.com/tj-actions/vercel-wait/pull/79): update actions/checkout action to v4 ([52f436b](https://github.com/tj-actions/vercel-wait/commit/52f436be82821881b9c8bc9bd952b9bf3880f57d))  - (repo-ranger[bot])
+- PR [#78](https://github.com/tj-actions/vercel-wait/pull/78): update tj-actions/release-tagger action to v4 ([d1911d9](https://github.com/tj-actions/vercel-wait/commit/d1911d99a34db6a3053dfa7ad7af87d49c5d3eb0))  - (repo-ranger[bot])
+- PR [#77](https://github.com/tj-actions/vercel-wait/pull/77): README.md ([bf20322](https://github.com/tj-actions/vercel-wait/commit/bf2032263ec71cf835775e2a3919bfec45e42ae8))  - (repo-ranger[bot])
+- PR [#76](https://github.com/tj-actions/vercel-wait/pull/76): update tj-actions/auto-doc action to v3 ([6d9e4d6](https://github.com/tj-actions/vercel-wait/commit/6d9e4d6f1132768e2e4c5df5160fd39e23336dc1))  - (repo-ranger[bot])
+- PR [#72](https://github.com/tj-actions/vercel-wait/pull/72): to v1.1.9 ([9fe1661](https://github.com/tj-actions/vercel-wait/commit/9fe166182b2609e2d701181687a23997a260f433))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update actions/checkout digest to b4ffde6 ([82c9423](https://github.com/tj-actions/vercel-wait/commit/82c942393fbb6746a8eb4500ffc5d20054e1fd73))  - (renovate[bot])
+- **deps:** Update tj-actions/auto-doc action to v3.4.0 ([8463fa5](https://github.com/tj-actions/vercel-wait/commit/8463fa520b87c2ad190bfd0df215a0b8465e5513))  - (renovate[bot])
+- **deps:** Update actions/checkout action to v4 ([106aa87](https://github.com/tj-actions/vercel-wait/commit/106aa87d54022fad087a4e6855e98352e02d8828))  - (renovate[bot])
+- **deps:** Update tj-actions/release-tagger action to v4 ([8dc7ebd](https://github.com/tj-actions/vercel-wait/commit/8dc7ebd68647c56de70b99440442528685a5ad5c))  - (renovate[bot])
+- **deps:** Update tj-actions/auto-doc action to v3 ([5efbddd](https://github.com/tj-actions/vercel-wait/commit/5efbddd3d6b8a4cd54692e35527d93beb66b5364))  - (renovate[bot])
+- **deps:** Update tj-actions/auto-doc action to v2.9.0 ([4443d98](https://github.com/tj-actions/vercel-wait/commit/4443d98a0d1cdeee6eed9f5e8ef5c0926ab4e643))  - (renovate[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded from v1.1.8 -> v1.1.9
+ ([45c5733](https://github.com/tj-actions/vercel-wait/commit/45c573341a412585160f95e54c5ba861a5f24e61))  - (jackton1)
+
 # [1.1.9](https://github.com/tj-actions/vercel-wait/compare/v1.1.8...v1.1.9) - (2023-07-20)
 
 ## <!-- 17 -->➖ Remove
