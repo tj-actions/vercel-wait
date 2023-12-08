@@ -34,7 +34,7 @@ on:
 
 ...
     steps:
-      - name: Wait for vercel deployment (push)
+      - name: Wait for vercel deployment (pull_request)
         uses: tj-actions/vercel-wait@v1
         with:
           project-id: ${{ secrets.VERCEL_PROJECT_ID }}
