@@ -46,14 +46,37 @@ on:
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|                             INPUT                              |  TYPE  | REQUIRED | DEFAULT |                                        DESCRIPTION                                         |
-|----------------------------------------------------------------|--------|----------|---------|--------------------------------------------------------------------------------------------|
-|        <a name="input_delay"></a>[delay](#input_delay)         | string |  false   | `"10"`  |                                      Delay in seconds                                      |
-| <a name="input_project-id"></a>[project-id](#input_project-id) | string |   true   |         | Vercel project id can be <br>obtained from `https://vercel.com/<team>/<project>/settings`  |
-|           <a name="input_sha"></a>[sha](#input_sha)            | string |   true   |         |                              The commit sha to wait <br>for                                |
-|     <a name="input_team-id"></a>[team-id](#input_team-id)      | string |  false   |         |    Vercel team id can be <br>obtained from `https://vercel.com/teams/<team>/settings`      |
-|     <a name="input_timeout"></a>[timeout](#input_timeout)      | string |  false   | `"600"` |                                     Timeout in seconds                                     |
-|        <a name="input_token"></a>[token](#input_token)         | string |   true   |         |          Vercel token can be obtained <br>from https://vercel.com/account/tokens           |
+```yaml
+- uses: tj-actions/vercel-wait@v1
+  id: vercel-wait
+  with:
+    # Delay in seconds
+    # Type: string
+    # Default: "10"
+    delay: ''
+
+    # Vercel project id can be obtained from `https://vercel.com/<team>/<project>/settings`
+    # Type: string
+    project-id: ''
+
+    # The commit sha to wait for
+    # Type: string
+    sha: ''
+
+    # Vercel team id can be obtained from `https://vercel.com/teams/<team>/settings`
+    # Type: string
+    team-id: ''
+
+    # Timeout in seconds
+    # Type: string
+    # Default: "600"
+    timeout: ''
+
+    # Vercel token can be obtained from https://vercel.com/account/tokens
+    # Type: string
+    token: ''
+
+```
 
 <!-- AUTO-DOC-INPUT:END -->
 
