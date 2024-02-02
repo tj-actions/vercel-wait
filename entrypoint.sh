@@ -22,6 +22,8 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
     echo "::warning::Failed to get deployment from: $request_url"
     break
   fi
+
+  echo "::debug::Response: $response"
   
   echo "::debug::Parsing the response from: $request_url"
   
