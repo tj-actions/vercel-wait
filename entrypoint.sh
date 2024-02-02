@@ -36,6 +36,7 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
     fi
     
     echo "::error::$combined_message"
+    exit 1
   fi
 
   echo "::debug::Response: $response"
