@@ -23,6 +23,21 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
     break
   fi
 
+  error_code=$(echo "$response" | jq -r '.error.code')
+
+  if [ "$error_code" = "forbidden" ]; then
+    error_message=$(echo "$response" | jq -r '.error.message')
+    invalid_token=$(echo "$response" | jq -r '.error.invalidToken')
+    
+    combined_message="$error_message"
+    
+    if [ "$invalid_token" = true ]; then
+      combined_message+=" (Invalid token detected.)"
+    fi
+    
+    echo "::error::$combined_message"
+  fi
+
   echo "::debug::Response: $response"
   
   echo "::debug::Parsing the response from: $request_url"
