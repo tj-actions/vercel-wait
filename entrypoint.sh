@@ -38,8 +38,6 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
     echo "::error::$combined_message"
     exit 1
   fi
-
-  echo "::debug::Response: $response"
   
   echo "::debug::Parsing the response from: $request_url"
   
