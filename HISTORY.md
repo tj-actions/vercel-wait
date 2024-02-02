@@ -1,5 +1,39 @@
 # Changelog
 
+# [1.2.1](https://github.com/tj-actions/vercel-wait/compare/v1.2.0...v1.2.1) - (2024-02-02)
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md ([#89](https://github.com/tj-actions/vercel-wait/issues/89))
+
+Co-authored-by: jackton1 <17484350+jackton1@users.noreply.github.com> ([c81601c](https://github.com/tj-actions/vercel-wait/commit/c81601ccb80544980448cfe9a436744979bd1f0e))  - (tj-actions[bot])
+- Update update-readme.yml ([5ecd8c7](https://github.com/tj-actions/vercel-wait/commit/5ecd8c7d51417c9a556b01957f990170a7aa8a1a))  - (Tonye Jack)
+- Update entrypoint.sh ([8ea200f](https://github.com/tj-actions/vercel-wait/commit/8ea200ff72a1e2c60d0fb3e10da8b99cb8694ce6))  - (Tonye Jack)
+- Update entrypoint.sh ([a4832df](https://github.com/tj-actions/vercel-wait/commit/a4832df7dc164da20858c197410caf05039cba8f))  - (Tonye Jack)
+- Update entrypoint.sh ([8783c96](https://github.com/tj-actions/vercel-wait/commit/8783c96cd8306f53e10c9d9e039f8d51ce0cd43e))  - (Tonye Jack)
+- Update entrypoint.sh ([ab802e8](https://github.com/tj-actions/vercel-wait/commit/ab802e8ab392a28c607931ca4ab958933fa7c7a7))  - (Tonye Jack)
+- Update entrypoint.sh ([02dd049](https://github.com/tj-actions/vercel-wait/commit/02dd0492c8c305ee6a06f6954a4f6d0f65873d10))  - (Tonye Jack)
+- Update entrypoint.sh ([4409e07](https://github.com/tj-actions/vercel-wait/commit/4409e0735648aed1b6b16fa9593de2daeb6b0374))  - (Tonye Jack)
+- Update README.md ([79d2c79](https://github.com/tj-actions/vercel-wait/commit/79d2c792576386c24d90b3554f7bcda209642f6e))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#88](https://github.com/tj-actions/vercel-wait/pull/88): update peter-evans/create-pull-request action to v6 ([a4b6105](https://github.com/tj-actions/vercel-wait/commit/a4b6105e3b067a8b21c3e05699ffddec4f561216))  - (repo-ranger[bot])
+- PR [#86](https://github.com/tj-actions/vercel-wait/pull/86): update tj-actions/verify-changed-files action to v17 [security] ([7164c40](https://github.com/tj-actions/vercel-wait/commit/7164c40662663a42855e65b985fa7559024ea026))  - (repo-ranger[bot])
+- Merge branch 'main' into renovate/github-tags-tj-actions/verify-changed-files-vulnerability ([86ee151](https://github.com/tj-actions/vercel-wait/commit/86ee15152e18479041ac4db22b404ba059bdca6d))  - (repo-ranger[bot])
+- Merge branch 'main' into renovate/github-tags-tj-actions/verify-changed-files-vulnerability ([0b1872d](https://github.com/tj-actions/vercel-wait/commit/0b1872d8da6553ce9bd91252d77804b97e7b9aae))  - (repo-ranger[bot])
+- PR [#83](https://github.com/tj-actions/vercel-wait/pull/83): to v1.2.0 ([18f068b](https://github.com/tj-actions/vercel-wait/commit/18f068b0c9176065fb99f402c64c8cf66da0ca80))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update peter-evans/create-pull-request action to v6 ([0159a88](https://github.com/tj-actions/vercel-wait/commit/0159a8861962e7979832dbaec390fcb1cbfca92c))  - (renovate[bot])
+- **deps:** Update tj-actions/verify-changed-files action to v17 [security] ([b59bc25](https://github.com/tj-actions/vercel-wait/commit/b59bc2578b94cdc9f8255f2a76917db9aa782f68))  - (renovate[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded from v1.1.10 -> v1.2.0
+ ([325172e](https://github.com/tj-actions/vercel-wait/commit/325172e039e5ecb7c9f5bf5ce68fe074c7583304))  - (jackton1)
+
 # [1.2.0](https://github.com/tj-actions/vercel-wait/compare/v1.1.10...v1.2.0) - (2023-12-05)
 
 ## <!-- 0 -->🚀 Features
