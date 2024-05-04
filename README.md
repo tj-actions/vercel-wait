@@ -55,15 +55,18 @@ on:
     # Default: "10"
     delay: ''
 
-    # Vercel project id can be obtained from `https://vercel.com/<team>/<project>/settings`
+    # Vercel project id can be 
+    # obtained from `https://vercel.com/<team>/<project>/settings` 
     # Type: string
     project-id: ''
 
-    # The commit sha to wait for
+    # The commit sha to wait 
+    # for 
     # Type: string
     sha: ''
 
-    # Vercel team id can be obtained from `https://vercel.com/teams/<team>/settings`
+    # Vercel team id can be 
+    # obtained from `https://vercel.com/teams/<team>/settings` 
     # Type: string
     team-id: ''
 
@@ -72,7 +75,8 @@ on:
     # Default: "600"
     timeout: ''
 
-    # Vercel token can be obtained from https://vercel.com/account/tokens
+    # Vercel token can be obtained 
+    # from https://vercel.com/account/tokens 
     # Type: string
     token: ''
 
