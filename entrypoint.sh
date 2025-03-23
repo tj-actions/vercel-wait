@@ -91,7 +91,7 @@ EOF
   fi
 
   # Sleep for a short interval to avoid spamming requests
-  sleep $INPUT_DELAY
+  sleep "$INPUT_DELAY"
 done
 
 if [ "$deployment_ready" = false ]; then
