@@ -6,6 +6,12 @@ start_time=$(date +%s)
 
 deployment_ready=false
 
+# Validate INPUT_TIMEOUT
+if ! [[ "$INPUT_TIMEOUT" =~ ^[0-9]+$ ]]; then
+  echo "::error::INPUT_TIMEOUT must be a valid number"
+  exit 1
+fi
+
 request_url="https://api.vercel.com/v6/deployments?projectId=$INPUT_PROJECT_ID&limit=100"
 
 if [[ -n "$INPUT_TEAM_ID" ]]; then
@@ -14,10 +20,20 @@ fi
 
 echo "::debug::Retrieving Deployments from: $request_url"
 
-while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "$INPUT_TIMEOUT" ]; do
+while [ "$deployment_ready" = false ]; do
+  elapsed_time=$(($(date +%s) - start_time))
+  remaining_time=$((INPUT_TIMEOUT - elapsed_time))
+
+  if [ "$elapsed_time" -ge "$INPUT_TIMEOUT" ]; then
+    echo "::error::Timeout reached: $INPUT_TIMEOUT seconds"
+    exit 1
+  fi
+
+  echo "::debug::Time remaining: $remaining_time seconds"
   echo "::debug::Requesting deployments from: $request_url"
-  response=$(curl -s "$request_url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
-  
+
+  response=$(curl -s --max-time 10 "$request_url" -H "Authorization: Bearer $INPUT_TOKEN") && exit_status=$? || exit_status=$?
+
   if [[ $exit_status -ne 0 ]]; then
     echo "::warning::Failed to get deployment from: $request_url"
     break
@@ -28,21 +44,21 @@ while [ "$deployment_ready" = false ] && [ "$(($(date +%s) - start_time))" -lt "
   if [ "$error_code" = "forbidden" ]; then
     error_message=$(echo "$response" | jq -r '.error.message')
     invalid_token=$(echo "$response" | jq -r '.error.invalidToken')
-    
+
     combined_message="$error_message"
-    
+
     if [ "$invalid_token" = true ]; then
       combined_message+=" (Invalid token detected.)"
     fi
-    
+
     echo "::error::$combined_message"
     exit 1
   fi
-  
+
   echo "::debug::Parsing the response from: $request_url"
-  
+
   deployment=$(echo "$response" | jq -r --arg INPUT_SHA "$INPUT_SHA" '.deployments[] | select(.meta.githubCommitSha==$INPUT_SHA)')
-  
+
   id=$(echo "$deployment" | jq -r '.uid')
   url=$(echo "$deployment" | jq -r '.url')
   state=$(echo "$deployment" | jq -r '.state')
@@ -73,6 +89,9 @@ EOF
   else
     break
   fi
+
+  # Sleep for a short interval to avoid spamming requests
+  sleep 5
 done
 
 if [ "$deployment_ready" = false ]; then
