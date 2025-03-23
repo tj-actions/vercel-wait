@@ -52,7 +52,7 @@ on:
   with:
     # Delay in seconds
     # Type: string
-    # Default: "10"
+    # Default: "5"
     delay: ''
 
     # Vercel project id can be 
