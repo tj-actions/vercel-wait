@@ -1,5 +1,57 @@
 # Changelog
 
+# [1.2.2](https://github.com/tj-actions/vercel-wait/compare/v1.2.1...v1.2.2) - (2025-03-23)
+
+## <!-- 1 -->🐛 Bug Fixes
+
+- Bug with timeout ([#108](https://github.com/tj-actions/vercel-wait/issues/108)) ([4d69ba4](https://github.com/tj-actions/vercel-wait/commit/4d69ba49c729dbdeb33c94be1b3501a937052d39))  - (Tonye Jack)
+
+## <!-- 17 -->➖ Remove
+
+- Deleted .github/workflows/dependabot-auto-merge.yml ([fc72cd5](https://github.com/tj-actions/vercel-wait/commit/fc72cd5745a31b7c9a3724054f033c532fe55c43))  - (Tonye Jack)
+- Deleted .github/workflows/rebase.yml ([604ffd0](https://github.com/tj-actions/vercel-wait/commit/604ffd08c005cb4d0a8208564bce1ccd4fc87da2))  - (Tonye Jack)
+- Deleted renovate.json ([886869e](https://github.com/tj-actions/vercel-wait/commit/886869ed153f578ab7ac486a0aa2bda7d9a052c7))  - (Tonye Jack)
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md
+ ([6395500](https://github.com/tj-actions/vercel-wait/commit/63955000e01a3065c34b23d10859342657010724))  - (repo-ranger[bot])
+
+## <!-- 30 -->📝 Other
+
+- PR [#101](https://github.com/tj-actions/vercel-wait/pull/101): update actions/checkout digest to a5ac7e5 ([05e28f7](https://github.com/tj-actions/vercel-wait/commit/05e28f7e018c6425916d7cb5d912383831a2814f))  - (repo-ranger[bot])
+- PR [#100](https://github.com/tj-actions/vercel-wait/pull/100): update actions/checkout digest to 0ad4b8f ([ed25cdb](https://github.com/tj-actions/vercel-wait/commit/ed25cdb6574ab5dc006aeef429f93f59245cfcf3))  - (repo-ranger[bot])
+- PR [#99](https://github.com/tj-actions/vercel-wait/pull/99): update actions/checkout digest to 44c2b7a ([24d4dfe](https://github.com/tj-actions/vercel-wait/commit/24d4dfe8ff977e705efadf087c80b12cd75d7f03))  - (repo-ranger[bot])
+- PR [#98](https://github.com/tj-actions/vercel-wait/pull/98): README.md ([f2b426c](https://github.com/tj-actions/vercel-wait/commit/f2b426cb8eb599bbbbcddc9d3ac9fd5b7104fa39))  - (repo-ranger[bot])
+- PR [#97](https://github.com/tj-actions/vercel-wait/pull/97): update tj-actions/verify-changed-files action to v20 ([fa22144](https://github.com/tj-actions/vercel-wait/commit/fa221446e9b5bc7f390dea659f6918b5dba7a76d))  - (repo-ranger[bot])
+- PR [#96](https://github.com/tj-actions/vercel-wait/pull/96): update actions/checkout digest to 0ad4b8f ([382a82c](https://github.com/tj-actions/vercel-wait/commit/382a82c049acc09f123d10ba6e8a65e79c320aeb))  - (repo-ranger[bot])
+- PR [#95](https://github.com/tj-actions/vercel-wait/pull/95): update actions/checkout digest to 1d96c77 ([370f25d](https://github.com/tj-actions/vercel-wait/commit/370f25d401450a30aeae798f22c11b1a7439bfc5))  - (repo-ranger[bot])
+- PR [#93](https://github.com/tj-actions/vercel-wait/pull/93): update dependabot/fetch-metadata action to v2 ([a9f285c](https://github.com/tj-actions/vercel-wait/commit/a9f285c4165dd63f63a78d76a1b1cc736b3f448a))  - (repo-ranger[bot])
+- PR [#92](https://github.com/tj-actions/vercel-wait/pull/92): update tj-actions/verify-changed-files action to v19 ([8b87a66](https://github.com/tj-actions/vercel-wait/commit/8b87a66915ddaa6b2720b14ed34679f018423681))  - (repo-ranger[bot])
+- PR [#91](https://github.com/tj-actions/vercel-wait/pull/91): update tj-actions/verify-changed-files action to v18 ([0440404](https://github.com/tj-actions/vercel-wait/commit/0440404d77f1555904cd474610fe1174b859be13))  - (repo-ranger[bot])
+- PR [#90](https://github.com/tj-actions/vercel-wait/pull/90): to v1.2.1 ([aed38f7](https://github.com/tj-actions/vercel-wait/commit/aed38f7f13c8faa5eb52d4e89cc2d2e7277f766b))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update actions/checkout digest to 11bd719 ([b6ebff8](https://github.com/tj-actions/vercel-wait/commit/b6ebff8983bc0e9fee6309b1786df0f3e1218e74))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to eef6144 ([61fba4c](https://github.com/tj-actions/vercel-wait/commit/61fba4c34c9c0e44e96fa11d14b3e07c5339b8c3))  - (renovate[bot])
+- **deps:** Update peter-evans/create-pull-request action to v7 ([#103](https://github.com/tj-actions/vercel-wait/issues/103)) ([72d789a](https://github.com/tj-actions/vercel-wait/commit/72d789aab50ac7edfd0b312db94c493cedfe9908))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to 692973e ([958ca4d](https://github.com/tj-actions/vercel-wait/commit/958ca4d9f6f355e84bfc9574c2196262b32dd53b))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to a5ac7e5 ([79f7b86](https://github.com/tj-actions/vercel-wait/commit/79f7b86c99bc3fa9e9f6e22b42fc22db2f14c205))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to 0ad4b8f ([b8f0dce](https://github.com/tj-actions/vercel-wait/commit/b8f0dce1c043bcfa4a8880ddcc94fbe22547a965))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to 44c2b7a ([008a055](https://github.com/tj-actions/vercel-wait/commit/008a055536879a940a54f07eebdf72f1b01c8ab3))  - (renovate[bot])
+- **deps:** Update tj-actions/verify-changed-files action to v20 ([9cc19ee](https://github.com/tj-actions/vercel-wait/commit/9cc19ee68b27acd122d9d295fcfc20e2170f0169))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to 0ad4b8f ([58ff502](https://github.com/tj-actions/vercel-wait/commit/58ff502a27183f2a87e3237f652416b2d93e4e1c))  - (renovate[bot])
+- **deps:** Update actions/checkout digest to 1d96c77 ([e394472](https://github.com/tj-actions/vercel-wait/commit/e39447230fda544d0ba1ccf8a0d97a5a5e69dbba))  - (renovate[bot])
+- **deps:** Update dependabot/fetch-metadata action to v2 ([4aeeecd](https://github.com/tj-actions/vercel-wait/commit/4aeeecd39a26a1d7ee1beb20bb1a906ac5b6e542))  - (renovate[bot])
+- **deps:** Update tj-actions/verify-changed-files action to v19 ([a43fe74](https://github.com/tj-actions/vercel-wait/commit/a43fe7404ad0a6c0be151b72cee2076bdcc6fff9))  - (renovate[bot])
+- **deps:** Update tj-actions/verify-changed-files action to v18 ([c5bf0b7](https://github.com/tj-actions/vercel-wait/commit/c5bf0b7c0e0ac4fd9be72f2e819c391ec7d2997e))  - (renovate[bot])
+
+## <!-- 9 -->⬆️ Upgrades
+
+- Upgraded from v1.2.0 -> v1.2.1
+ ([4281a58](https://github.com/tj-actions/vercel-wait/commit/4281a58a8fa983b2e6f33b2d4823bd31d9051ec9))  - (jackton1)
+
 # [1.2.1](https://github.com/tj-actions/vercel-wait/compare/v1.2.0...v1.2.1) - (2024-02-02)
 
 ## <!-- 26 -->🔄 Update
@@ -338,17 +390,14 @@ Signed-off-by: dependabot[bot] <support@github.com> ([131fd76](https://github.co
 
 - Upgraded from v1.1.2 -> v1.1.3
  ([254c698](https://github.com/tj-actions/vercel-wait/commit/254c6983f921b444b6beeda2cf22dd816145167b))  - (jackton1)
+- Upgraded from v1.1.1 -> v1.1.2
+ ([f5baeaa](https://github.com/tj-actions/vercel-wait/commit/f5baeaafca113bfadcf64860acfcfbbdb87e4da7))  - (jackton1)
 
 # [1.1.3](https://github.com/tj-actions/vercel-wait/compare/v1.1.2...v1.1.3) - (2022-12-25)
 
 ## <!-- 26 -->🔄 Update
 
 - Update entrypoint.sh ([38ff673](https://github.com/tj-actions/vercel-wait/commit/38ff6730fcef7671094c1416f7dc51a5cda17786))  - (Tonye Jack)
-
-## <!-- 9 -->⬆️ Upgrades
-
-- Upgraded from v1.1.1 -> v1.1.2
- ([f5baeaa](https://github.com/tj-actions/vercel-wait/commit/f5baeaafca113bfadcf64860acfcfbbdb87e4da7))  - (jackton1)
 
 # [1.1.2](https://github.com/tj-actions/vercel-wait/compare/v1.1.1...v1.1.2) - (2022-12-25)
 
